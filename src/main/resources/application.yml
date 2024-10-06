@@ -1,0 +1,21 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: spring-oauth2
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 17065402412-61h48hvuibs5jq3hkl7rul1gtoiskoqi.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid, profile, email
+            redirect-uri: "http://localhost/login/oauth2/code/google"
+#        provider:
+#          google:
+#            authorization-uri: https://accounts.google.com/o/oauth2/v2/auth
+#            token-uri: https://oauth2.googleapis.com/token
+#            user-info-uri: https://openidconnect.googleapis.com/v1/userinfo
+#            user-name-attribute: sub
