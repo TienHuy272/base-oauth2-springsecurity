@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class PrivateController {
 
-    @GetMapping("/messages")
+    @GetMapping("/private")
     public ResponseEntity<MessageDto> messages() {
-        return ResponseEntity.ok(new MessageDto("Private content..."));
+        return ResponseEntity.ok(new MessageDto("This is a private message"));
     }
 }

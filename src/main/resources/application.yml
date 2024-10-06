@@ -9,8 +9,8 @@ spring:
       resourceserver:
         opaque-token:
           introspection-uri: https://www.googleapis.com
-          client-id: 17065402412-61h48hvuibs5jq3hkl7rul1gtoiskoqi.apps.googleusercontent.com
-          client-secret: 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
+          client-id: "17065402412-61h48hvuibs5jq3hkl7rul1gtoiskoqi.apps.googleusercontent.com"
+          client-secret: "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"
 
 
 
