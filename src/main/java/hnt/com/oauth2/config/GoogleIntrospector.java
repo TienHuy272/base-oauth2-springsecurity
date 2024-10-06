@@ -19,13 +19,13 @@ public class GoogleIntrospector implements OpaqueTokenIntrospector {
     @Override
     public OAuth2AuthenticatedPrincipal introspect(String token) {
         UserInfo user = userInfoClient.get()
-                .uri(uriBuilder -> uriBuilder.path("/oath2/v3/userinfo").queryParam("access_token", token).build())
+                .uri(uriBuilder -> uriBuilder.path("/oauth2/v3/userinfo").queryParam("access_token", token).build())
                 .retrieve()
                 .bodyToMono(UserInfo.class)
                 .block();
         Map<String, Object> attributes = new HashMap<>();
+        attributes.put("sub", user.sub());
         attributes.put("name", user.name());
-        attributes.put("email", user.email());
         return new OAuth2IntrospectionAuthenticatedPrincipal(user.name(), attributes,null);
     }
 
