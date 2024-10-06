@@ -8,7 +8,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 public class GoogleIntrospector implements OpaqueTokenIntrospector {
 
